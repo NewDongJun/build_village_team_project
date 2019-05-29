@@ -1,5 +1,7 @@
 #include "basic_function.h"
 #include <math.h>
+#include <stdlib.h> 
+#include <time.h>
 #include <CoalaMOD.h>
 #pragma comment(lib, "CoalaMOD.lib")
 /*
@@ -74,4 +76,10 @@ void line(BlockID block, int x, int y, int z, int xlen, int zlen) {
 }
 
 //5. 0부터 n-1까지 개의 난수를 생성하는 함수
-int random()
+// n을 받음
+int random(int n) {
+	srand((unsigned)time(NULL));
+	int rd = rand();
+
+	return(rd % n);
+}

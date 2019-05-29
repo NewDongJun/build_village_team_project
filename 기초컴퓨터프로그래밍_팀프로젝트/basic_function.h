@@ -17,3 +17,7 @@ void circle(BlockID block, int x, int y, int z, int r);
 //4. 선그리는 함수
 //블록 x좌표 y좌표 z좌표 x너비 z너비를 받음
 void line(BlockID block, int x, int y, int z, int xlen, int zlen);
+
+//5. 0부터 n-1까지 개의 난수를 생성하는 함수
+// n을 받음
+int random(int n);

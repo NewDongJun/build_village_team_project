@@ -9,9 +9,6 @@
 
 int main()
 {
-	BlockID glass = createBlock(BLOCK_GLASS);
-	BlockID air = createBlock(BLOCK_AIR);
-	line(glass, 0, 6, 0, 1, 10);
 
 }
 
