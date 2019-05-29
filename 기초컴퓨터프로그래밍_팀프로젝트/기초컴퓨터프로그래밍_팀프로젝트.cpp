@@ -7,6 +7,7 @@
 
 int main()
 {
-	
+	int a = plus();
+
 }
 

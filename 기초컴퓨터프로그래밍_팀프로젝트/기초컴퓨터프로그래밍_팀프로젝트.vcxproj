@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="basic_function.h" />
     <ClInclude Include="dong.h" />
     <ClInclude Include="min.h" />
     <ClInclude Include="nyeng.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="woo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="basic_function.cpp" />
     <ClCompile Include="dong.cpp" />
     <ClCompile Include="min.cpp" />
     <ClCompile Include="nyeng.cpp" />
