@@ -9,8 +9,9 @@
 
 int main()
 {
-	BlockID stone = createBlock(BLOCK_GLASS);
-	rectangle(stone, 0, 6, 0, 10, 6, 1);
+	BlockID glass = createBlock(BLOCK_GLASS);
+	BlockID air = createBlock(BLOCK_AIR);
+	line(glass, 0, 6, 0, 1, 10);
 
 }
 

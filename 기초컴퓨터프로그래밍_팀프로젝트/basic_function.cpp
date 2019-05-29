@@ -1,13 +1,18 @@
 #include "basic_function.h"
+#include <math.h>
 #include <CoalaMOD.h>
 #pragma comment(lib, "CoalaMOD.lib")
 /*
 기본함수 10개
 1. 사각형 만드는 함수
 2. 기둥을 만드는 함수
+3. 원을 만드는 함수
+4. 선그리는 함수
+5. 0부터 n-1까지 개의 난수를 생성하는 함수
+
 3. 선그리는함수(필드에 그리는선)
 4. 의자함수
- 필드 만드는 함수( 함수하나 만들고 선그리는거랑 같이 쓰면 기본함수로 취급가능)
+    필드 만드는 함수( 함수하나 만들고 선그리는거랑 같이 쓰면 기본함수로 취급가능)
 6. 골대 뼈대함수
 7. 골대 망 함수
 8. 벽함수(경기장에 서리하는거)
@@ -43,3 +48,30 @@ void pillar(int x, int y, int z, int ylen) {
 	}
 }
 
+//3. 원을 만드는 함수
+//블록 x좌표 y좌표 z좌표 반지름을 받음 
+//축구장 원만들때 쑬 수있지 않을까?
+void circle(BlockID block, int x, int y, int z, int r) {
+	
+	double PI = 3.14159265358979323846;
+	double radian = PI / 180;
+
+	for (int i = 0; i < 360; i++) {
+		double rx = r * cos(radian * i);
+		double rz = r * sin(radian * i);
+		locateBlock(block, x + rx, y, z + rz);
+	}
+}
+
+//4. 선그리는 함수
+//블록 x좌표 y좌표 z좌표 x너비 z너비를 받음
+void line(BlockID block, int x, int y, int z, int xlen, int zlen) {
+	for (int i = 0; i < xlen; i++) {
+		for (int j = 0; j < zlen; j++) {
+			locateBlock(block, x + i, y, z + j);
+		}
+	}
+}
+
+//5. 0부터 n-1까지 개의 난수를 생성하는 함수
+int random()
