@@ -1,5 +1,4 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 #include "dong.h"
 #include "min.h"
 #include "nyeng.h"
