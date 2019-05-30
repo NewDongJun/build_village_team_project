@@ -9,9 +9,6 @@
 
 int main()
 {
-
-
-	StairsID stair = createStairs(STAIRS_DARK_OAK, false);
-	chairs_W(stair, 0, 4, 0, 6, 4);
+	
 }
 
