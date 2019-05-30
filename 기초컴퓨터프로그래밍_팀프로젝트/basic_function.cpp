@@ -100,13 +100,16 @@ void chairs_N (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
 	}
 
 	//의자뒤의 빈부분 채워주는 함수
-	for (int i = 1; i < xlen; i++) {
+	for (int i = 0; i < xlen; i++) {
 		for (int j = 1; j < ylen; j++)
 		{
-			//z좌표 감소하는 쪽이 북쪽이므로 z-j가 맞음
-			WoodID wood = createWood(WOOD_OAK);
-			locateBlock(wood, x + i, y + j, z - j);
-
+			int high = j;
+			while (high >= 1) {
+				//z좌표 감소하는 쪽이 북쪽이므로 z-j가 맞음
+				WoodID wood = createWood(WOOD_DARK_OAK);
+				locateBlock(wood, x + i, y + high - 1, z - j);
+				high--;
+			}
 		}
 	}
 }

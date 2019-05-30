@@ -21,3 +21,7 @@ void line(BlockID block, int x, int y, int z, int xlen, int zlen);
 //5. 0부터 n-1까지 개의 난수를 생성하는 함수
 // n을 받음
 int random(int n);
+
+//6. 의자함수N
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_N(StairsID stairs, int x, int y, int z, int xlen, int ylen);
