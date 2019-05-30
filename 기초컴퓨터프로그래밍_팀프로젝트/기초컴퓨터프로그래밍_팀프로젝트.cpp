@@ -12,6 +12,6 @@ int main()
 
 
 	StairsID stair = createStairs(STAIRS_DARK_OAK, false);
-	chairs_N(stair, 0, 4, 0, 6, 4);
+	chairs_W(stair, 0, 4, 0, 6, 4);
 }
 

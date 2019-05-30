@@ -11,7 +11,10 @@
 3. 원을 만드는 함수
 4. 선그리는 함수
 5. 0부터 n-1까지 개의 난수를 생성하는 함수
-6. 의자함수
+6. 의자함수N
+7. 의자함수S
+8. 의자함수E
+9. 의자함수W
 
 
 6. 골대 뼈대함수
@@ -100,13 +103,13 @@ void chairs_N (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
 	}
 
 	//의자뒤의 빈부분 채워주는 함수
+	WoodID wood = createWood(WOOD_DARK_OAK);   //의자 빈부분을 뭘로 채울지 결정
 	for (int i = 0; i < xlen; i++) {
 		for (int j = 1; j < ylen; j++)
 		{
 			int high = j;
 			while (high >= 1) {
 				//z좌표 감소하는 쪽이 북쪽이므로 z-j가 맞음
-				WoodID wood = createWood(WOOD_DARK_OAK);
 				locateBlock(wood, x + i, y + high - 1, z - j);
 				high--;
 			}
@@ -118,6 +121,29 @@ void chairs_N (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
 //stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
 void chairs_S (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
 	
+	//의자 생성 
+	for (int i = 0; i < xlen; i++) {
+		for (int j = 0; j < ylen; j++)
+		{
+			//z좌표 감소하는 쪽이 남쪽이므로 z+j
+			installStairs(stairs, x + i, y + j, z + j, FACING_SOUTH);
+
+		}	
+	}
+	
+	//의자뒤의 빈부분 채워주는 함수
+	WoodID wood = createWood(WOOD_DARK_OAK);   //의자 빈부분을 뭘로 채울지 결정
+	for (int i = 0; i < xlen; i++) {
+		for (int j = 1; j < ylen; j++)
+		{
+			int high = j;
+			while (high >= 1) {
+				//z좌표 감소하는 쪽이 북쪽이므로 z+j가 맞음
+				locateBlock(wood, x + i, y + high - 1, z + j);
+				high--;
+			}
+		}
+	}
 
 }
 
@@ -125,10 +151,52 @@ void chairs_S (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
 //stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
 void chairs_E (StairsID stair, int x, int y, int z, int zlen, int ylen) {
 
+	//의자생성
+	for (int i = 0; i < zlen; i++) {
+		for (int j = 0; j < ylen; j++) {
+
+			installStairs(stair, x + j, y + j, z + i, FACING_EAST);
+		}
+	}
+
+	//의자뒤 빈부분 채워줌
+	WoodID wood = createWood(WOOD_DARK_OAK);   //의자 빈부분을 뭘로 채울지 결정 
+	for (int i = 0; i < zlen; i++) {
+		for (int j = 1; j < ylen; j++) {
+
+			int high = j;
+			while (high >= 1) {
+				locateBlock(wood, x + j, y + high - 1, z + i);
+				high--;
+			}
+
+		}
+	}
 }
 
 //9. 의자함수W
 //stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
 void chairs_W(StairsID stair, int x, int y, int z, int zlen, int ylen) {
 
+	//의자생성
+	for (int i = 0; i < zlen; i++) {
+		for (int j = 0; j < ylen; j++) {
+
+			installStairs(stair, x - j, y + j, z + i, FACING_WEST);
+		}
+	}
+
+	//의자뒤 빈부분 채워줌
+	WoodID wood = createWood(WOOD_DARK_OAK);   //의자 빈부분을 뭘로 채울지 결정 
+	for (int i = 0; i < zlen; i++) {
+		for (int j = 1; j < ylen; j++) {
+
+			int high = j;
+			while (high >= 1) {
+				locateBlock(wood, x - j, y + high - 1, z + i);
+				high--;
+			}
+
+		}
+	}
 }

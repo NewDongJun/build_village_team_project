@@ -25,3 +25,15 @@ int random(int n);
 //6. 의자함수N
 //stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
 void chairs_N(StairsID stairs, int x, int y, int z, int xlen, int ylen);
+
+//7. 의자함수S
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_S(StairsID stairs, int x, int y, int z, int xlen, int ylen);
+
+//8. 의자함수E
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_E(StairsID stair, int x, int y, int z, int zlen, int ylen);
+
+//9. 의자함수W
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_W(StairsID stair, int x, int y, int z, int zlen, int ylen);
