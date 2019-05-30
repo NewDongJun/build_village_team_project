@@ -11,13 +11,11 @@
 3. 원을 만드는 함수
 4. 선그리는 함수
 5. 0부터 n-1까지 개의 난수를 생성하는 함수
+6. 의자함수
 
-3. 선그리는함수(필드에 그리는선)
-4. 의자함수
-    필드 만드는 함수( 함수하나 만들고 선그리는거랑 같이 쓰면 기본함수로 취급가능)
+
 6. 골대 뼈대함수
 7. 골대 망 함수
-8. 벽함수(경기장에 서리하는거)
 
 
 깃발 함수 
@@ -82,4 +80,52 @@ int random(int n) {
 	int rd = rand();
 
 	return(rd % n);
+}
+
+//x좌표 증가가 동쪽 감소가 서쪽 
+//z좌표 감소가 북쪽 증가가 남쪽
+
+//6. 의자함수N
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_N (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
+	
+	//의자 생성 
+	for (int i = 0; i < xlen; i++) {
+		for (int j = 0; j < ylen; j++)
+		{
+			//z좌표 감소하는 쪽이 북쪽이므로 z-j가 맞음
+			installStairs(stairs, x + i, y + j, z -j, FACING_NORTH);
+
+		}
+	}
+
+	//의자뒤의 빈부분 채워주는 함수
+	for (int i = 1; i < xlen; i++) {
+		for (int j = 1; j < ylen; j++)
+		{
+			//z좌표 감소하는 쪽이 북쪽이므로 z-j가 맞음
+			WoodID wood = createWood(WOOD_OAK);
+			locateBlock(wood, x + i, y + j, z - j);
+
+		}
+	}
+}
+
+//7. 의자함수S
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_S (StairsID stairs, int x, int y, int z, int xlen, int ylen) {
+	
+
+}
+
+//8. 의자함수E
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_E (StairsID stair, int x, int y, int z, int zlen, int ylen) {
+
+}
+
+//9. 의자함수W
+//stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
+void chairs_W(StairsID stair, int x, int y, int z, int zlen, int ylen) {
+
 }

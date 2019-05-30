@@ -9,6 +9,7 @@
 
 int main()
 {
-
+	StairsID stair = createStairs(STAIRS_DARK_OAK, false);
+	installStairs(stair, 0, 4, 0, FACING_EAST);
 }
 
