@@ -16,30 +16,53 @@ void DJ_stand(int xlen, int zlen, int high, int x, int y, int z) {
 }
 
 
+FlowerID orange_tulip = createFlower(FLOWER_OXEYE_TULIP);
+FlowerID white_tulip = createFlower(FLOWER_WHITE_TULIP);
+FlowerID pink_tulip = createFlower(FLOWER_PINK_TULIP);
+FlowerID oxeye_tulip = createFlower(FLOWER_OXEYE_TULIP);
+
+FlowerID sunflower = createFlower(FLOWER_SUNFLOWER);
 
 
-void plant_wood(int x, int y, int z) {
-	int n = random(6);
-	switch (n)
-	{
+//화단 만드는 함수 
+//x좌표 y좌표 z좌표 x축길이 z축길이를 받는다.
+void plant_flower (int x, int y, int z, int xlen, int zlen) {
+	
+	for (int i = 0; i < xlen; i++) {
+		for (int j = 0; j < zlen; j++) {
+			FlowerID flower;
 
-	case 0:
-		break;
+			int n = random(5);
 
-	case 1:
-		break;
+			switch (n)
+			{
+			case 0:
+				flower = orange_tulip;
+				break;
 
-	case 2:
-		break;
+			case 1:
+				flower = white_tulip;
+				break;
 
-	case 3:
-		break;
+			case 2:
+				flower = pink_tulip;
+				break;
 
-	case 4:
-		break;
+			case 3:
+				flower = oxeye_tulip;
+				break;
 
-	case 5:
-		break;
+			case 4:
+				flower = sunflower;
+				break;
+			}
+
+
+			locateBlock(flower, x + i, y, z + j);
+			printf("%d", n);
+
+			//딜레이를 주지않으면 for문이 빨라서 같은 수만 출력됨 
+			delay(776);
+		}
 	}
-
 }

@@ -37,3 +37,7 @@ void chairs_E(StairsID stair, int x, int y, int z, int zlen, int ylen);
 //9. 의자함수W
 //stairs x좌표, y좌표, z좌표, 의자너비, 의자높이를 받음
 void chairs_W(StairsID stair, int x, int y, int z, int zlen, int ylen);
+
+//10. 딜레이 함수
+//for문 반복횟수를 받는다.
+void delay(int n);

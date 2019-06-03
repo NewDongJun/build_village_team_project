@@ -7,4 +7,6 @@
 //필드의 x너비 y너비 의자 높이 그리고 가장 필드의 모서리 중에서 가장 작은 x y z 값
 void DJ_stand(int xlen, int zlen, int high, int x, int y, int z);
 
-void plant_wood(int x, int y, int z);
+//화단 만드는 함수 
+//x좌표 y좌표 z좌표 x축길이 z축길이를 받는다.
+void plant_flower(int x, int y, int z, int xlen, int zlen);

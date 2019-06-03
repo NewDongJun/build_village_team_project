@@ -9,6 +9,6 @@
 
 int main()
 {
-	
+	plant_flower(-10, 4, -10, 4, 5);
 }
 

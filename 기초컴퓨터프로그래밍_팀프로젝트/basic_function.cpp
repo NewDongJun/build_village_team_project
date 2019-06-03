@@ -199,3 +199,15 @@ void chairs_W(StairsID stair, int x, int y, int z, int zlen, int ylen) {
 		}
 	}
 }
+
+//10. 딜레이 함수
+//for문 반복횟수를 받는다.
+void delay(int n) {
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+
+			}
+		}
+	}
+}
