@@ -17,11 +17,10 @@ void DJ_stand(int xlen, int zlen, int high, int x, int y, int z) {
 
 
 FlowerID orange_tulip = createFlower(FLOWER_OXEYE_TULIP);
-FlowerID white_tulip = createFlower(FLOWER_WHITE_TULIP);
+FlowerID blue_orchid = createFlower(FLOWER_BLUE_ORCHID);
 FlowerID pink_tulip = createFlower(FLOWER_PINK_TULIP);
 FlowerID oxeye_tulip = createFlower(FLOWER_OXEYE_TULIP);
-
-FlowerID sunflower = createFlower(FLOWER_SUNFLOWER);
+FlowerID poppy = createFlower(FLOWER_POPPY);
 
 
 //화단 만드는 함수 
@@ -32,6 +31,7 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 		for (int j = 0; j < zlen; j++) {
 			FlowerID flower;
 
+			//0~4까지의 난수를 생성한다.
 			int n = random(5);
 
 			switch (n)
@@ -41,7 +41,7 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 				break;
 
 			case 1:
-				flower = white_tulip;
+				flower = blue_orchid;
 				break;
 
 			case 2:
@@ -53,7 +53,7 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 				break;
 
 			case 4:
-				flower = sunflower;
+				flower = poppy;
 				break;
 			}
 
@@ -62,7 +62,7 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 			printf("%d", n);
 
 			//딜레이를 주지않으면 for문이 빨라서 같은 수만 출력됨 
-			delay(776);
+			delay(774);
 		}
 	}
 }
