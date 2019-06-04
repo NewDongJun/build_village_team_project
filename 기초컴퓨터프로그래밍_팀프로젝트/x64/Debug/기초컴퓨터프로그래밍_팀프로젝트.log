@@ -1,4 +1,15 @@
-﻿  dong.cpp
-  기초컴퓨터프로그래밍_팀프로젝트.cpp
+﻿  basic_function.cpp
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(64,35): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(64,24): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(217,43): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(217,35): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(217,25): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(239,40): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(239,31): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(239,22): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(250,40): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(250,31): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  woo.cpp
   코드를 생성하고 있습니다...
-  기초컴퓨터프로그래밍_팀프로젝트.vcxproj -> D:\기초컴퓨터프로그래밍(조용진_교수님)\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\x64\Debug\기초컴퓨터프로그래밍_팀프로젝트.exe
+C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\basic_function.cpp(250,22): warning C4244:  '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  기초컴퓨터프로그래밍_팀프로젝트.vcxproj -> C:\Users\최우형\Desktop\코딩공부\Githup\build_village_team_project\기초컴퓨터프로그래밍_팀프로젝트\x64\Debug\기초컴퓨터프로그래밍_팀프로젝트.exe
