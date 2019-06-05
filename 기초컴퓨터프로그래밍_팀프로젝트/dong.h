@@ -10,3 +10,7 @@ void DJ_stand(int xlen, int zlen, int high, int x, int y, int z);
 //화단 만드는 함수 
 //x좌표 y좌표 z좌표 x축길이 z축길이를 받는다.
 void plant_flower(int x, int y, int z, int xlen, int zlen);
+
+//트로피 조형물 만드는 함수
+//x좌표 y좌표 z좌표를 받음
+void trophy(int x, int y, int z);

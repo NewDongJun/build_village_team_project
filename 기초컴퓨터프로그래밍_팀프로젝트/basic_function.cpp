@@ -16,7 +16,8 @@
 8. 의자함수E
 9. 의자함수W
 10. 딜레이함수
-
+11. 구를만드는 함수
+12. 축구공 함수
 
 6. 골대 뼈대함수
 7. 골대 망 함수
@@ -211,6 +212,7 @@ void delay(int n) {
 		}
 	}
 }
+
 //11. 구를 만드는 함수
 //block, x좌표, y좌표, z좌표, 구의 반지름을 받음
 void circle2(BlockID block, int x, int y, int z, int r) {

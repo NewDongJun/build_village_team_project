@@ -57,7 +57,6 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 				break;
 			}
 
-
 			locateBlock(flower, x + i, y, z + j);
 			printf("%d", n);
 
@@ -65,4 +64,59 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 			delay(774);
 		}
 	}
+}
+
+//트로피 조형물 만드는 함수
+//x좌표 y좌표 z좌표를 받음
+void trophy(int x, int y, int z) {
+	WoolID wool = createWool(COLOR_YELLOW);
+
+	//트로피 조형물 밑의 부분 만들기
+	int layer = 0;
+
+	for (int i = 5; i > 2; i--) {
+		for (int j = 0; j < 2; j++) {
+
+			circle(wool, x, y + layer, z, i);
+			layer++;
+		}
+	}
+	for (int i = 5; i < 8; i++) {
+		for (int j = 0; j < 4; j++) {
+			circle(wool, x, y + layer, z, i);
+			layer++;
+		}
+	}	
+	layer--;
+
+	for (int i = 0; i < 7; i++) {
+		circle(wool, x, y + layer, z, i);
+	}
+
+	//트로피 손잡이 만들기
+	for (int i = 0; i < 20; i++) {
+		locateBlock(wool, x, y + layer, z - 10 + i);
+	}
+	int cnt = 0;
+	for (int i = 0; i < 4; i++) {
+		locateBlock(wool, x, y + layer - i, z - 11);
+		locateBlock(wool, x, y + layer - i, z + 10);
+		cnt++;
+	}
+	int fix = cnt;
+	for (int i = 0; i < 2; i++) {
+		locateBlock(wool, x, y + layer - fix - i, z - 10);
+		locateBlock(wool, x, y + layer - fix - i, z + 9);
+		cnt++;
+	}
+	for (int i = 0; i < 12; i++) {
+		locateBlock(wool, x, y + layer - cnt, z - 9 + i);
+		locateBlock(wool, x, y + layer - cnt, z + 8 - i);
+		cnt++;
+	}
+
+	//트로비 조형물 위의 부분 만들기 
+	//BlockID diamond = createBlock(BLOCK_DIAMOND);
+	//BlockID air = createBlock(BLOCK_AIR);
+	//soccerball(x, y + layer + 4, z, 5);
 }
