@@ -30,8 +30,8 @@ void mainground() {
 	BlockID grass = createBlock(BLOCK_GRASS);
 	WoolID whiteline = createWool(BlockColor(COLOR_WHITE));
 
-	rectangle(grass, -3, 5, -3, 98, 1, 128);
-	rectangle(grass, -7, 4, -7, 106, 1, 136);
+	rectangle(grass, -23, 5, -23, 138, 1, 168);
+	rectangle(grass, -27, 4, -27, 146, 1, 176);
 	//BlockID block, int x, int y, int z, int xlen, int ylen, int zlen) {
 
 	line(whiteline, 1, 5, 1, 90, 1);

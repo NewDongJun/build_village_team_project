@@ -262,3 +262,4 @@ void soccerball(int x, int y, int z, int r) {
 			locateBlock(a1, x + rx2, y + ry2, z + rz);
 		}
 	}
+}
