@@ -41,3 +41,11 @@ void chairs_W(StairsID stair, int x, int y, int z, int zlen, int ylen);
 //10. 딜레이 함수
 //for문 반복횟수를 받는다.
 void delay(int n);
+
+//11. 구 함수
+// 구를 만든다.
+void circle2(BlockID block, int x, int y, int z, int r);
+
+
+//12. 축구공 함수
+void soccerball(int x, int y, int z, int r);

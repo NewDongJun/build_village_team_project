@@ -211,3 +211,54 @@ void delay(int n) {
 		}
 	}
 }
+//11. 구를 만드는 함수
+//block, x좌표, y좌표, z좌표, 구의 반지름을 받음
+void circle2(BlockID block, int x, int y, int z, int r) {
+
+	double PI = 3.14159265358979323846;
+	double radian = PI / 180;
+
+	for (int i = 0; i < 360; i++) {
+		double rx = r * cos(radian * i);
+		double rz = r * sin(radian * i);
+
+		//원을 만들면서 z축을 기준으로 회전시킴
+		for (int j = 0; j < 360; j++) {
+			double rx2 = rx * cos(radian * j);
+			double ry2 = rx * sin(radian * j);
+			locateBlock(block, x + rx2, y + ry2, z + rz);
+		}
+	}
+
+}
+
+//12.축구공 아직 미완성, 다듬을 필요가 있음
+void soccerball(int x, int y, int z, int r) {
+
+	WoolID a1 = createWool(BlockColor(COLOR_BLACK));
+	WoolID a2 = createWool(BlockColor(COLOR_WHITE));
+	double PI = 3.14159265358979323846;
+	double radian = PI / 180;
+
+	for (int i = 1; i < 360; i++) {
+		double rx = r * cos(radian * i);
+		double rz = r * sin(radian * i);
+
+		//원을 만들면서 z축을 기준으로 회전시킴
+		for (int j = 1; j < 360; j = j++) {
+			double rx2 = rx * cos(radian * j);
+			double ry2 = rx * sin(radian * j);
+			locateBlock(a2, x + rx2, y + ry2, z + rz);
+		}
+	}
+	for (int i = 0; i < 360; i = i + 4) {
+		double rx = r * cos(radian * i);
+		double rz = r * sin(radian * i);
+
+		//원을 만들면서 z축을 기준으로 회전시킴
+		for (int j = 0; j < 360; j = j + 4) {
+			double rx2 = rx * cos(radian * j);
+			double ry2 = rx * sin(radian * j);
+			locateBlock(a1, x + rx2, y + ry2, z + rz);
+		}
+	}
