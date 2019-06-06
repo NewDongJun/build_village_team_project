@@ -5,4 +5,4 @@
 void woo();
 void chair_woo();
 void mainground();
-int airballoon(int x, int y, int z, int r);
+void sportcenter();
