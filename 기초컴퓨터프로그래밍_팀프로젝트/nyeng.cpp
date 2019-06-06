@@ -104,6 +104,20 @@ void scoreboard() {
 	locateBlock(GB, 106, 19, 61);
 	locateBlock(GB, 106, 21, 61);
 }
+//펜스 함수
+void fence() {
+	FenceID FENCE = createFence(FENCE_OAK);
+	BlockID LL = createBlock(BLOCK_LAPIS_LAZULI);
+	line(LL, -4, 6, -3, 100, 1);
+	line(LL, 95, 6, -2, 1, 128);
+	line(LL, -4, 6, 125, 99, 1);
+	line(LL, -4, 7, -3, 100, 1);
+	line(LL, 95, 7, -2, 1, 128);
+	line(LL, -4, 7, 125, 99, 1);
+	line(FENCE, -4, 8, -3, 100, 1);
+	line(FENCE, 95, 8, -2, 1, 128);
+	line(FENCE, -4, 8, 125, 99, 1);
+}
 //최종 함수
 void nyeng() {
 	scoreboard();
