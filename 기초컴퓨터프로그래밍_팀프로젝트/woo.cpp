@@ -9,7 +9,7 @@ void woo() {
 
 	mainground();
 	chair_woo();
-	sportcenter();
+	
 }
 
 void chair_woo() {

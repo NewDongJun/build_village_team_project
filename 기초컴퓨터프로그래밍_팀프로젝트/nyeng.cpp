@@ -108,15 +108,60 @@ void scoreboard() {
 void fence() {
 	FenceID FENCE = createFence(FENCE_OAK);
 	BlockID LL = createBlock(BLOCK_LAPIS_LAZULI);
-	line(LL, -4, 6, -3, 100, 1);
-	line(LL, 95, 6, -2, 1, 128);
-	line(LL, -4, 6, 125, 99, 1);
-	line(LL, -4, 7, -3, 100, 1);
-	line(LL, 95, 7, -2, 1, 128);
-	line(LL, -4, 7, 125, 99, 1);
-	line(FENCE, -4, 8, -3, 100, 1);
-	line(FENCE, 95, 8, -2, 1, 128);
-	line(FENCE, -4, 8, 125, 99, 1);
+	line(LL, -4, 6, -11, 100, 1);
+	line(LL, 95, 6, -10, 1, 144);
+	line(LL, -4, 6, 133, 99, 1);
+	line(LL, -4, 6, -10, 1, 144);
+
+	line(LL, -4, 7, -11, 100, 1);
+	line(LL, 95, 7, -10, 1, 144);
+	line(LL, -4, 7, 133, 99, 1);
+	line(LL, -4, 7, -10, 1, 144);
+
+	line(FENCE, -4, 8, -11, 100, 1);
+	line(FENCE, 95, 8, -10, 1, 144);
+	line(FENCE, -4, 8, 133, 99, 1);
+	line(FENCE, -4, 8, -10, 1, 144);
+
+}
+//사람 함수{
+void person1(int x, int y, int z) {
+	WoolID RW = createWool(COLOR_RED);
+	WoolID BW = createWool(COLOR_BLUE);
+	WoolID WW = createWool(COLOR_WHITE);
+	FenceID FENCE = createFence(FENCE_OAK);
+	PlanksID FACE = createPlanks(PLANKS_OAK);
+	JackOLanternID asd = createJackOLantern();
+	locateFence(FENCE, x - 1, y, z);
+	locateFence(FENCE, x + 1, y, z);
+	locateFence(FENCE, x - 2, y + 2, z);
+	locateFence(FENCE, x + 2, y + 2, z);
+	locateWool(BW, x - 1, y + 1, z);
+	locateWool(BW, x, y + 1, z);
+	locateWool(BW, x + 1, y + 1, z);
+	locateWool(RW, x - 1, y + 2, z);
+	locateWool(RW, x, y + 2, z);
+	locateWool(RW, x + 1, y + 2, z);
+	locatePlanks(asd, x, y + 3, z);
+}
+void person2(int x, int y, int z) {
+	WoolID RW = createWool(COLOR_RED);
+	WoolID BW = createWool(COLOR_BLUE);
+	WoolID WW = createWool(COLOR_WHITE);
+	FenceID FENCE = createFence(FENCE_OAK);
+	PlanksID FACE = createPlanks(PLANKS_OAK);
+	JackOLanternID asd = createJackOLantern();
+	locateFence(FENCE, x - 1, y, z);
+	locateFence(FENCE, x + 1, y, z);
+	locateFence(FENCE, x - 2, y + 2, z);
+	locateFence(FENCE, x + 2, y + 2, z);
+	locateWool(WW, x - 1, y + 1, z);
+	locateWool(WW, x, y + 1, z);
+	locateWool(WW, x + 1, y + 1, z);
+	locateWool(BW, x - 1, y + 2, z);
+	locateWool(BW, x, y + 2, z);
+	locateWool(BW, x + 1, y + 2, z);
+	locatePlanks(asd, x, y + 3, z);
 }
 //최종 함수
 void nyeng() {
@@ -125,4 +170,17 @@ void nyeng() {
 	score(106, 18, 56);
 	score(106, 18, 64);
 	score(106, 18, 68);
+	fence();
+	person1(20, 6, 40);
+	person1(25, 6, 40);
+	person1(40, 6, 40);
+	person1(40, 6, 30);
+	person1(40, 6, 35);
+	person1(30, 6, 25);
+	person2(20, 6, 100);
+	person2(26, 6, 100);
+	person2(36, 6, 100);
+	person2(40, 6, 90);
+	person2(35, 6, 110);
+	person2(27, 6, 95);
 }

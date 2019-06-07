@@ -61,7 +61,7 @@ void plant_flower (int x, int y, int z, int xlen, int zlen) {
 			printf("%d", n);
 
 			//딜레이를 주지않으면 for문이 빨라서 같은 수만 출력됨 
-			delay(774);
+			delay(721);
 		}
 	}
 }

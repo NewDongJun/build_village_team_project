@@ -3,6 +3,24 @@
 #pragma comment(lib, "CoalaMOD.lib")
 #include "basic_function.h"
 
+void min() {
+
+	WoolID WHiteblock = createWool(BlockColor(COLOR_WHITE));
+	BlockID pillar = createBlock(BLOCK_IRON);
+	PlanksID DIY = createPlanks(PLANKS_JUNGLE);
+	BlockID GLOW = createBlock(BLOCK_GLOWSTONE);
+	
+
+
+
+
+	soccerpillar(pillar, 35, 5, -7, 20, 10, 8);
+	soccerpillar(pillar, 35, 5, 120, 20, 10, 8);
+
+	airballoon(GLOW, DIY, WHiteblock, -7, 80, 40, 20, 20, 20);
+	airballoon(GLOW, DIY, WHiteblock, -20, 140, 90, 24, 24, 24);
+
+}
 
 void soccerpillar(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen) {
 
@@ -60,21 +78,24 @@ void netL(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen)
 		}
 	}
 }
-void pillar1(int x, int y, int z, int ylen) {
-	BlockID iron = createBlock(BLOCK_IRON);
+
+
+void pillar1(int block, int x, int y, int z, int ylen) {
+
+
 	for (int i = 0; i < ylen; i++) {
-		locateBlock(iron, x, y + i, z);
+		locateBlock(block, x, y + i, z);
 
 	}
 }
 
-void airballoon(int rectc, int x, int y, int z, int xlen, int ylen, int zlen) {
 
-	rectangle(rectc, x, y, z, xlen, ylen, zlen);
-	pillar1(x + (xlen / 4), y + ylen, z + (zlen / 4), ylen);
-	pillar1(x + (xlen / 4), y + ylen, z + zlen - (zlen / 4), ylen);
-	pillar1(x + xlen - (xlen / 4), y + ylen, z + zlen - (zlen / 4), ylen);
-	pillar1(x + xlen - (xlen / 4), y + ylen, z + (zlen / 4), ylen);
+void airballoon(int cblock, int rblock, int pblock, int x, int y, int z, int xlen, int ylen, int zlen) {
 
-	soccerball(x + (xlen / 2), y + ylen + ylen + (ylen / 3), z + +(zlen / 2), ylen / 2);
+	circle2(cblock, x + (xlen / 2), y + ylen + ylen + (ylen / 3), z + +(zlen / 2), ylen);
+	pillar1(pblock, x + (xlen / 4), y + ylen, z + (zlen / 4), ylen);
+	pillar1(pblock, x + (xlen / 4), y + ylen, z + zlen - (zlen / 4), ylen);
+	pillar1(pblock, x + xlen - (xlen / 4), y + ylen, z + zlen - (zlen / 4), ylen);
+	pillar1(pblock, x + xlen - (xlen / 4), y + ylen, z + (zlen / 4), ylen);
+	rectangle(rblock, x, y, z, xlen, ylen, zlen);
 }
