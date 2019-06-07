@@ -11,7 +11,7 @@ int main()
 {
 
 
-/	nyeng();
+	nyeng();
 	woo();
 	sportcenter();
 	min();
