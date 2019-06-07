@@ -1,6 +1,9 @@
 #include "min.h"
 #include <CoalaMOD.h>
 #pragma comment(lib, "CoalaMOD.lib")
+#include "basic_function.h"
+
+
 void soccerpillar(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen) {
 
 	for (int i = 0; i <= ylen; i++) {
@@ -56,4 +59,22 @@ void netL(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen)
 			}
 		}
 	}
+}
+void pillar1(int x, int y, int z, int ylen) {
+	BlockID iron = createBlock(BLOCK_IRON);
+	for (int i = 0; i < ylen; i++) {
+		locateBlock(iron, x, y + i, z);
+
+	}
+}
+
+void airballoon(int rectc, int x, int y, int z, int xlen, int ylen, int zlen) {
+
+	rectangle(rectc, x, y, z, xlen, ylen, zlen);
+	pillar1(x + (xlen / 4), y + ylen, z + (zlen / 4), ylen);
+	pillar1(x + (xlen / 4), y + ylen, z + zlen - (zlen / 4), ylen);
+	pillar1(x + xlen - (xlen / 4), y + ylen, z + zlen - (zlen / 4), ylen);
+	pillar1(x + xlen - (xlen / 4), y + ylen, z + (zlen / 4), ylen);
+
+	soccerball(x + (xlen / 2), y + ylen + ylen + (ylen / 3), z + +(zlen / 2), ylen / 2);
 }
