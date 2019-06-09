@@ -1,8 +1,11 @@
 # build_village_team_project
+
+#1.월드소계
 저희 10조는 축구장을 메인으로 그에 어울리는 건추물들로 마인크래프트 월드를 꾸몄습니다.
 우선 축구장의 필드와 관중석, 선수들을 배치하였고 그 후 주변에 CAU 스포츠센터와 트로피 건축물을 세웠습니다.
 그리고 하늘에는 열기구를 띄웠습니다.
 
+2.기본함수 
 //1.사각형을 만드는 함수
 //블록, x좌표, y좌표, z좌표, x너비, y너비, z너비 를 받음
 void rectangle(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen) {
@@ -253,6 +256,7 @@ void soccerball(int x, int y, int z, int r) {
 	}
 }
 
+#3.기본기능을 이용해서 만든 함수
 woo.cpp
 
 chair_woo(); 관객석 함수/의자 기본 함수를 이용하여 운동장 주변을 관객석으로 둘러 싸았다.
@@ -293,5 +297,5 @@ fence()은 기본함수 line()함수를 활용하여 경기장과 관중석 사�
 person1(int x, int y, int z), person2(int x, int y, int z) 함수는 사람과 유사한 모양으로 블록을 배치하여 사람을 만들어낸 함수이다.
 nyeng();함수는 위의 함수들을 모두 묶어 편하게 실행해주기 위해 만들어낸 함수이다.
 
-
+#4.유튜브 동영상 
 유투브 영상 링크 : https://www.youtube.com/channel/UCEt9hdve8MtbX9oGdPxpwgA?view_as=subscriber
