@@ -8,27 +8,27 @@
 # 2.기본함수 
 //1.사각형을 만드는 함수
 //블록, x좌표, y좌표, z좌표, x너비, y너비, z너비 를 받음
-void rectangle(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen) {
-	for (int i = 0; i < xlen; i++) {
-		for (int j = 0; j < ylen; j++) {
-			for (int k = 0; k < zlen; k++) {
-				locateBlock(block, x + i, y + j, z + k);
+	void rectangle(BlockID block, int x, int y, int z, int xlen, int ylen, int zlen) {
+		for (int i = 0; i < xlen; i++) {
+			for (int j = 0; j < ylen; j++) {
+				for (int k = 0; k < zlen; k++) {
+					locateBlock(block, x + i, y + j, z + k);
+				}
 			}
 		}
 	}
-}
 
 //2. 기둥을 만드는 함수 
 //x좌표 y좌표, z좌표 y의 너비를 받음
-void pillar(int x, int y, int z, int ylen) {
-	BlockID iron = createBlock(BLOCK_IRON);
-	for (int i = 0; i < ylen; i++) {
-		locateBlock(iron, x + 1, y + i, z);
-		locateBlock(iron, x - 1, y + i, z);
-		locateBlock(iron, x, y + i, z + 1);
-		locateBlock(iron, x, y + i, z - 1);
+	void pillar(int x, int y, int z, int ylen) {
+		BlockID iron = createBlock(BLOCK_IRON);
+		for (int i = 0; i < ylen; i++) {
+			locateBlock(iron, x + 1, y + i, z);
+			locateBlock(iron, x - 1, y + i, z);
+			locateBlock(iron, x, y + i, z + 1);
+			locateBlock(iron, x, y + i, z - 1);
+		}
 	}
-}
 
 //3. 원을 만드는 함수
 //블록 x좌표 y좌표 z좌표 반지름을 받음 
@@ -225,36 +225,37 @@ void circle2(BlockID block, int x, int y, int z, int r) {
 }
 
 //12.축구공 함수
+	
 void soccerball(int x, int y, int z, int r) {
+		
+		WoolID a1 = createWool(BlockColor(COLOR_BLACK));
+		WoolID a2 = createWool(BlockColor(COLOR_WHITE));
+		double PI = 3.14159265358979323846;
+		double radian = PI / 180;
 
-	WoolID a1 = createWool(BlockColor(COLOR_BLACK));
-	WoolID a2 = createWool(BlockColor(COLOR_WHITE));
-	double PI = 3.14159265358979323846;
-	double radian = PI / 180;
+		for (int i = 1; i < 360; i++) {
+			double rx = r * cos(radian * i);
+			double rz = r * sin(radian * i);
 
-	for (int i = 1; i < 360; i++) {
-		double rx = r * cos(radian * i);
-		double rz = r * sin(radian * i);
+			//원을 만들면서 z축을 기준으로 회전시킴
+			for (int j = 1; j < 360; j = j++) {
+				double rx2 = rx * cos(radian * j);
+				double ry2 = rx * sin(radian * j);
+				locateBlock(a2, x + rx2, y + ry2, z + rz);
+			}
+		}
+		for (int i = 0; i < 360; i = i + 4) {
+			double rx = r * cos(radian * i);
+			double rz = r * sin(radian * i);
 
-		//원을 만들면서 z축을 기준으로 회전시킴
-		for (int j = 1; j < 360; j = j++) {
-			double rx2 = rx * cos(radian * j);
-			double ry2 = rx * sin(radian * j);
-			locateBlock(a2, x + rx2, y + ry2, z + rz);
+			//원을 만들면서 z축을 기준으로 회전시킴
+			for (int j = 0; j < 360; j = j + 4) {
+				double rx2 = rx * cos(radian * j);
+				double ry2 = rx * sin(radian * j);
+				locateBlock(a1, x + rx2, y + ry2, z + rz);
+			}
 		}
 	}
-	for (int i = 0; i < 360; i = i + 4) {
-		double rx = r * cos(radian * i);
-		double rz = r * sin(radian * i);
-
-		//원을 만들면서 z축을 기준으로 회전시킴
-		for (int j = 0; j < 360; j = j + 4) {
-			double rx2 = rx * cos(radian * j);
-			double ry2 = rx * sin(radian * j);
-			locateBlock(a1, x + rx2, y + ry2, z + rz);
-		}
-	}
-}
 
 # 3.기본기능을 이용해서 만든 함수
 woo.cpp
